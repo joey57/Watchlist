@@ -10,15 +10,15 @@
   text-align: center;
   font-size: 35px;
   font-family: sans-serif;
-  font-weight: bolder;
+  font-weight: bold;
 }
 p{
   font-size: 23px;
 }
 .overview{
-  text-align: right;
+  text-align: left;
 }
 .ratings{
-  text-align: right;
-  color: green;
+  text-align: left;
+  color: rgb(116, 6, 6);
 }
