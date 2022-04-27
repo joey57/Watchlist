@@ -9,6 +9,7 @@
       </div>
     {% endfor %}  
 {% endmacro %}  
+
 <!--Displaying review macro -->
 {% macro displayReviews(review_list) %} 
    {% for review in review_list %} 
@@ -16,4 +17,5 @@
       <h2> {{ review.title }} </h2>
       <p> {{ review.review | truncate(10) }}</p>
    </div>
+   {% endfor %} 
 {% endmacro %}       
