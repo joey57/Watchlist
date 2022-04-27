@@ -1,6 +1,3 @@
-from crypt import methods
-from email import message
-from turtle import title
 from flask import redirect, render_template, request, url_for
 from app import app
 from .request import get_movies, get_movie,search_movie
