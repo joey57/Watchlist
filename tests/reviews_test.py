@@ -1,6 +1,5 @@
 import unittest
-from models import reviews
-Review = reviews.Review
+from app.models import Review
 
 class TestReview(unittest.TestCase):
 
@@ -23,6 +22,5 @@ class TestReview(unittest.TestCase):
     self.new_review.save_review()
     self.assertTrue(len(Review.all_reviews)>0)
     
-if __name__ == '__main__':
-     unittest.main()      
+ 
       
