@@ -2,8 +2,9 @@ from flask import redirect, render_template, request, url_for, abort
 from . import main
 from ..request import get_movies, get_movie,search_movie
 from ..models import Review, User
-from .forms import ReviewForm
+from .forms import ReviewForm, UpdateProfile
 from flask_login import login_required
+from .. import db
 
 # views
 @main.route('/')
@@ -68,7 +69,9 @@ def profile(uname):
     user = User.query.filter_by(username = uname).first()
     if user is None:
         abort(404)
-    return render_template("profile/profile.html", user = user)          
+    return render_template("profile/profile.html", user = user)  
+
+
 
 
 
