@@ -3,7 +3,7 @@ from flask_mail import Message
 from flask import render_template
 from . import mail
 subject_pref = 'watchlist'
-sender_email = 'joyce.njoroge@moringaschool.com'
+sender_email = 'joyce.njoroge@student.moringaschool.com'
 
 
 
