@@ -16,7 +16,12 @@ class Config:
   MAIL_USE_TLS = True
   MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
   MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-  SENDER_MAIL = 'james@moringaschool.com'
+  SUBJECT_PREFIX ='watchlist'
+  SENDER_MAIL = 'joyce.njoroge@moringaschool.com'
+
+  @staticmethod
+  def init_app(app):
+    pass
 
 class ProdConfig:
   '''
