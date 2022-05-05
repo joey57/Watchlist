@@ -46,7 +46,7 @@ class DevConfig(Config):
        Config: The parent configuration class with general configuration settings
   '''
   SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://postgres:whalien52@localhost/watchlist'
-  DEBUG = True
+DEBUG = True
 
 config_options ={
   'development':DevConfig,
