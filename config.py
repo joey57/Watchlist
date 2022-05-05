@@ -7,7 +7,7 @@ class Config:
   MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
   SECRET_KEY = os.environ.get('SECRET_KEY')
   SQLALCHEMY_TRACK_MODIFICATIONS = False
-  UPLOADED_PHOTOS_DEST ='app/static/photos'
+  UPLOADED_PHOTOS_DEST='app/static/photos'
 
   # email configurations
   MAIL_SERVER = 'smtp.googlemail.com'
@@ -33,7 +33,7 @@ class ProdConfig:
     Config: The parent configuration class with General configuration settings
   '''
   SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
-  
+
 class TestConfig(Config):
    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://postgres:whalien52@localhost/watchlist_test'
 
