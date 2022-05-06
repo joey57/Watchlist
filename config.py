@@ -32,7 +32,10 @@ class ProdConfig:
   Args:
     Config: The parent configuration class with General configuration settings
   '''
-  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+  uri = os.getenv('DATABASE_URL')
+  if uri and uri.startswith('postgres://'):
+    uri = uri.replace('postgres://','postgresql://',1)
+  SQLALCHEMY_DATABASE_URI=uri
 
 class TestConfig(Config):
   '''
