@@ -32,11 +32,11 @@ class ProdConfig:
   Args:
     Config: The parent configuration class with General configuration settings
   '''
-#   uri = os.getenv('DATABASE_URL')
-#   if uri and uri.startswith('postgres://'):
-#       uri = uri.replace('postgres://','postgresql://',1)
-#       SQLALCHEMY_DATABASE_URI=uri
-# DEBUG = True
+  uri = os.getenv('DATABASE_URL')
+  if uri and uri.startswith('postgres://'):
+      uri = uri.replace('postgres://','postgresql://',1)
+      SQLALCHEMY_DATABASE_URI=uri
+DEBUG = True
 
 class TestConfig(Config):
   '''
@@ -49,7 +49,7 @@ class DevConfig(Config):
   Args: 
        Config: The parent configuration class with general configuration settings
   '''
-  SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://postgres:whalien52@localhost/watchlist'
+  # SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://postgres:whalien52@localhost/watchlist'
 
 config_options ={
   'development':DevConfig,
