@@ -7,7 +7,7 @@ class Config:
   MOVIE_API_KEY = os.environ.get('MOVIE_API_KEY')
   SECRET_KEY = os.environ.get('SECRET_KEY')
   SQLALCHEMY_TRACK_MODIFICATIONS = False
-  UPLOADED_PHOTOS_DEST = 'app/static/photos/' 
+  UPLOADED_PHOTOS_DEST = 'static/photos/' 
 
   # email configurations
   MAIL_SERVER = 'smtp.googlemail.com'
